@@ -1,0 +1,32 @@
+[2025-03-05T09:27:04.148+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-05T09:27:04.176+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_demo.training_basic_classifier manual__2025-03-05T09:26:52.799651+00:00 [queued]>
+[2025-03-05T09:27:04.186+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_demo.training_basic_classifier manual__2025-03-05T09:26:52.799651+00:00 [queued]>
+[2025-03-05T09:27:04.187+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-05T09:27:04.202+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): training_basic_classifier> on 2025-03-05 09:26:52.799651+00:00
+[2025-03-05T09:27:04.219+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1408) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-05T09:27:04.223+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_demo', 'training_basic_classifier', 'manual__2025-03-05T09:26:52.799651+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmpyvm2dhjt']
+[2025-03-05T09:27:04.228+0000] {standard_task_runner.py:72} INFO - Started process 1421 to run task
+[2025-03-05T09:27:04.229+0000] {standard_task_runner.py:105} INFO - Job 59: Subtask training_basic_classifier
+[2025-03-05T09:27:04.297+0000] {task_command.py:467} INFO - Running <TaskInstance: ml_pipeline_demo.training_basic_classifier manual__2025-03-05T09:26:52.799651+00:00 [running]> on host aacdd75e5d47
+[2025-03-05T09:27:04.409+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline_demo' AIRFLOW_CTX_TASK_ID='training_basic_classifier' AIRFLOW_CTX_EXECUTION_DATE='2025-03-05T09:26:52.799651+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-05T09:26:52.799651+00:00'
+[2025-03-05T09:27:04.414+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-05T09:27:04.415+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-05T09:27:04.416+0000] {logging_mixin.py:190} INFO - Current task name:training_basic_classifier state:running start_date:2025-03-05 09:27:04.177552+00:00
+[2025-03-05T09:27:04.417+0000] {logging_mixin.py:190} INFO - Dag name:ml_pipeline_demo and current dag run status:running
+[2025-03-05T09:27:04.417+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-05T09:27:04.438+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/sklearn/utils/validation.py:1408: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().
+  y = column_or_1d(y, warn=True)
+
+[2025-03-05T09:27:04.596+0000] {logging_mixin.py:190} INFO - ML model training done and saved to /mlmodel.pkl
+[2025-03-05T09:27:04.598+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-05T09:27:04.629+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-05T09:27:04.630+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_demo, task_id=training_basic_classifier, run_id=manual__2025-03-05T09:26:52.799651+00:00, execution_date=20250305T092652, start_date=20250305T092704, end_date=20250305T092704
+[2025-03-05T09:27:04.687+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-05T09:27:04.692+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-05T09:27:04.695+0000] {logging_mixin.py:190} INFO - Dag name:ml_pipeline_demo queued_at:2025-03-05 09:26:52.904465+00:00
+[2025-03-05T09:27:04.695+0000] {logging_mixin.py:190} INFO - Task hostname:aacdd75e5d47 operator:PythonOperator
+[2025-03-05T09:27:04.735+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-05T09:27:04.768+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-05T09:27:04.770+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

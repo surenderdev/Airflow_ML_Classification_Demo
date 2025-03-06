@@ -1,0 +1,28 @@
+[2025-03-05T09:27:11.759+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-05T09:27:11.791+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ml_pipeline_demo.predict_prob_testdata manual__2025-03-05T09:26:52.799651+00:00 [queued]>
+[2025-03-05T09:27:11.809+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ml_pipeline_demo.predict_prob_testdata manual__2025-03-05T09:26:52.799651+00:00 [queued]>
+[2025-03-05T09:27:11.810+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-05T09:27:11.833+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): predict_prob_testdata> on 2025-03-05 09:26:52.799651+00:00
+[2025-03-05T09:27:11.849+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1449) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-05T09:27:11.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'ml_pipeline_demo', 'predict_prob_testdata', 'manual__2025-03-05T09:26:52.799651+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/ml_pipeline.py', '--cfg-path', '/tmp/tmp120bhjdw']
+[2025-03-05T09:27:11.855+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask predict_prob_testdata
+[2025-03-05T09:27:11.854+0000] {standard_task_runner.py:72} INFO - Started process 1462 to run task
+[2025-03-05T09:27:11.931+0000] {task_command.py:467} INFO - Running <TaskInstance: ml_pipeline_demo.predict_prob_testdata manual__2025-03-05T09:26:52.799651+00:00 [running]> on host aacdd75e5d47
+[2025-03-05T09:27:12.086+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ml_pipeline_demo' AIRFLOW_CTX_TASK_ID='predict_prob_testdata' AIRFLOW_CTX_EXECUTION_DATE='2025-03-05T09:26:52.799651+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-05T09:26:52.799651+00:00'
+[2025-03-05T09:27:12.088+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-05T09:27:12.089+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-05T09:27:12.090+0000] {logging_mixin.py:190} INFO - Current task name:predict_prob_testdata state:running start_date:2025-03-05 09:27:11.792592+00:00
+[2025-03-05T09:27:12.091+0000] {logging_mixin.py:190} INFO - Dag name:ml_pipeline_demo and current dag run status:running
+[2025-03-05T09:27:12.093+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-05T09:27:12.099+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-05T09:27:12.123+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-05T09:27:12.126+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=ml_pipeline_demo, task_id=predict_prob_testdata, run_id=manual__2025-03-05T09:26:52.799651+00:00, execution_date=20250305T092652, start_date=20250305T092711, end_date=20250305T092712
+[2025-03-05T09:27:12.165+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-05T09:27:12.166+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-05T09:27:12.167+0000] {logging_mixin.py:190} INFO - Dag name:ml_pipeline_demo queued_at:2025-03-05 09:26:52.904465+00:00
+[2025-03-05T09:27:12.169+0000] {logging_mixin.py:190} INFO - Task hostname:aacdd75e5d47 operator:PythonOperator
+[2025-03-05T09:27:12.195+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-05T09:27:12.233+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-05T09:27:12.235+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
